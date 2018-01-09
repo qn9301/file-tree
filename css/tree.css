@@ -1,0 +1,87 @@
+body {
+	margin: 0;
+}
+.tree-fl{
+	float: left;
+}
+.tree-fr{
+	float: right;
+}
+.tree-clearfix:after{
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	visibility: 0;
+	clear: both;
+}
+.tree-close > .tree-head > .tree-icon{
+	width: 20px;
+	height: 20px;
+	background: url(../img/plus.png);
+	background-size: 100% 100%;
+}
+.tree-head > .tree-icon,
+.tree-head > .tree-dir,
+.tree-head > .tree-file,
+.tree-head > .tree-block
+{
+	width: 20px;
+	height: 20px;
+}
+.tree-head > .tree-checkbox {
+	height: 20px;
+}
+.tree-head > .tree-checkbox input[type=checkbox]{
+	vertical-align: middle;
+	margin-top: 0 !important;
+}
+.tree-head > .tree-file{
+	background: url(../img/file.png);
+	background-size: 100% 100%;
+}
+.tree-close > .tree-head > .tree-dir{
+	background: url(../img/dir.png);
+	background-size: 100% 100%;
+}
+.tree-open > .tree-head > .tree-icon{
+	background: url(../img/minus.png);
+	background-size: 100% 100%;
+}
+.tree-open > .tree-head > .tree-dir{
+	background: url(../img/dir-open.png);
+	background-size: 100% 100%;
+}
+.tree-close > .tree-body {
+	height: 0;
+	overflow: hidden;
+}
+.tree-open > .tree-body {
+	height: auto;
+	overflow: hidden;
+}
+.tree-head {
+	margin: 4px 0;
+	cursor: default;
+	white-space: nowrap;
+}
+.tree-dir,.tree-icon,.tree-title,.tree-file,
+.tree-checkbox,.tree-block {
+	margin: 0 4px;
+	font-size: 12px;
+	display: inline-block;
+	vertical-align: top;
+}
+.tree-ckecked > .tree-head{
+	border:#00a6ed solid 1px;
+}
+.tree-body-0{padding-left: 10px;}
+.tree-body-1{padding-left: 20px;}
+.tree-body-2{padding-left: 30px;}
+.tree-body-3{padding-left: 40px;}
+.tree-body-4{padding-left: 50px;}
+.tree-body-5{padding-left: 60px;}
+.tree-body-6{padding-left: 70px;}
+.tree-body-7{padding-left: 80px;}
+.tree-body-8{padding-left: 90px;}
+.tree-body-9{padding-left: 100px;}

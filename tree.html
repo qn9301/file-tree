@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src='http://www.jq22.com/jquery/jquery-2.1.1.js'></script>
+	<script src='./js/filetree.js'></script>
+	<link rel="stylesheet" type="text/css" href="./css/tree.css">
+</head>
+<body>
+	<div id='tree'>
+		<!-- <div>
+			<div class='tree-content'>
+				<div class='tree-close'>
+					<div class='tree-head tree-clearfix'>
+						<div class='tree-fl tree-icon'></div>
+						<div class='tree-fl tree-dir'></div>
+						<div class='tree-title'>我的题库</div>
+					</div>
+					<div class='tree-body-1'>
+						<div class='tree-open tree-clearfix'>
+							<div class='tree-head'>
+								<div class='tree-fl tree-icon'></div>
+								<div class='tree-fl tree-dir'></div>
+								<div class='tree-title'>数学知识点</div>
+							</div>
+							<div>
+								<div class='tree-body'>
+									
+								</div>
+							</div>
+						</div>
+						<div class='tree-open tree-clearfix'>
+							<div class='tree-head'>
+								<div class='tree-fl tree-icon'></div>
+								<div class='tree-fl tree-dir'></div>
+								<div class='tree-title'>直线</div>
+							</div>
+							<div>
+								<div class='tree-body'>
+									
+								</div>
+							</div>
+						</div>
+						<div class='tree-open tree-clearfix'>
+							<div class='tree-head'>
+								<div class='tree-fl tree-icon'></div>
+								<div class='tree-fl tree-dir'></div>
+								<div class='tree-title'>数与式</div>
+							</div>
+							<div>
+								<div class='tree-body'>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	</div>
+	<script>
+		var config = {
+				options: {
+					el: '#tree'
+				},
+				datas: [
+						{
+							id: 1,
+							title: '我的题库',
+							data: [
+								{
+									id: '1-1', 
+									title: '数学知识点',
+									data: [
+										{id: '1-1-1', title: '直线', data: []},
+										{
+											id: '1-1-2', 
+											title: '数与式', 
+											data: [
+												{id: '1-1-2-1', title: '实数', data:[]},
+												{id: '1-1-2-2', title: '分数', data:[]},
+												{id: '1-1-2-3', title: '有理数', data:[]},
+												{id: '1-1-2-4', title: '无理数', data:[]},
+												{id: '1-1-2-5', title: '代数式', data:[]},
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							id: 1,
+							title: '学校共享题库',
+							data: [
+
+							]
+						},
+						{
+							id: 1,
+							title: '睿智题库',
+							data: [
+
+							]
+						}
+					],
+				event: {
+					click: function (node, state, e){
+						console.log(node)
+						if (node.deep != 1){
+							return ;
+						}
+						node.replace([
+										{id: '1-1-1', title: '直线', data: []},
+										{
+											id: '1-1-2', 
+											title: '数与式', 
+											data: [
+												{id: '1-1-2-1', title: '实数', data:[]},
+												{id: '1-1-2-2', title: '分数', data:[]},
+												{id: '1-1-2-3', title: '有理数', data:[]},
+												{id: '1-1-2-4', title: '无理数', data:[]},
+												{id: '1-1-2-5', title: '代数式', data:[]},
+											]
+										}
+									])
+					}
+				}
+		}
+		new tree(config)
+	</script>
+</body>
+</html>
