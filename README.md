@@ -7,6 +7,9 @@
 
 - 当数据量过大后，导致页面变卡，改写为按需加载dom，提升页面性能
 
+## image
+![image](https://github.com/qn9301/file-tree/blob/master/img/asset.png?raw=true)
+
 ## example
 ```
 datas => {
